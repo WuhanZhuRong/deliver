@@ -1,0 +1,56 @@
+
+<van-cell title="选择需求" is-link bind:click="showPopup" />
+<van-popup show="{{ show }}" bind:close="onClose" position="bottom" custom-style="height: 40%;">
+    <van-picker
+      columns="{{ columns }}"
+      bind:change="onSelect"
+    />
+</van-popup>
+
+
+<demo-block>
+  <van-cell-group>
+    <van-field
+      value="{{ username }}"
+      label="住户名"
+      placeholder="请输入住户名"
+      clearable
+      right-icon-class="custom-icon"
+      required
+    />
+    <van-field
+      value="{{ address }}"
+      label="地址"
+      placeholder="请输入地址"
+      clearable
+      right-icon-class="custom-icon"
+      required
+    />
+    <van-field
+      value="{{ mobile }}"
+      label="联系方式"
+      placeholder="请输入联系方式"
+      clearable
+      right-icon-class="custom-icon"
+      required
+    />
+  </van-cell-group>
+</demo-block>
+
+
+<demo-block>
+  <van-cell-group>
+    <van-field
+      value="{{ message }}"
+      label="详细信息"
+      type="textarea"
+      placeholder="请输入详细信息"
+      rows="1"
+      autosize
+      border="{{ false }}"
+    />
+  </van-cell-group>
+</demo-block>
+
+<van-button type="primary" size="large" block custom-class="demo-margin-bottom">发布需求</van-button>
+

@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/publish/publish",
+    "pages/claim/claim"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -9,6 +9,19 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布需求"
+      },
+      {
+        "pagePath": "pages/claim/claim",
+        "text": "认领需求"
+      }
+    ]
+  },
+  "usingComponents": {
+  },
   "sitemapLocation": "sitemap.json"
 }
