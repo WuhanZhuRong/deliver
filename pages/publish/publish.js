@@ -40,8 +40,8 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
-
+  onShow() {
+    this.getTabBar().init();
   },
 
   /**
