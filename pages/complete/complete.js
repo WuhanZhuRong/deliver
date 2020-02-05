@@ -1,4 +1,4 @@
-// pages/claim/claim.js
+// pages/complete/complete.js
 Page({
 
   /**

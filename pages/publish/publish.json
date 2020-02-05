@@ -1,10 +1,10 @@
 {
   "usingComponents": {
-    "van-field": "@vant/weapp/dist/field/index",
-    "van-picker": "@vant/weapp/dist/picker/index",
-    "van-popup": "@vant/weapp/dist/popup/index",
-    "van-cell": "@vant/weapp/dist/cell/index",
-    "van-cell-group": "@vant/weapp/dist/cell-group/index",
-    "van-button": "@vant/weapp/dist/button/index"
+    "van-field": "../../miniprogram_npm/@vant/weapp/field/index",
+    "van-picker": "../../miniprogram_npm/@vant/weapp/picker/index",
+    "van-popup": "../../miniprogram_npm/@vant/weapp/popup/index",
+    "van-cell": "../../miniprogram_npm/@vant/weapp/cell/index",
+    "van-cell-group": "../../miniprogram_npm/@vant/weapp/cell-group/index",
+    "van-button": "../../miniprogram_npm/@vant/weapp/button/index"
   }
 }

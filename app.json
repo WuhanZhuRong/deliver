@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/publish/publish",
-    "pages/claim/claim"
+    "pages/complete/complete",
+    "pages/ongoing/ongoing",
+    "pages/pending/pending"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,12 +18,19 @@
         "text": "发布需求"
       },
       {
-        "pagePath": "pages/claim/claim",
-        "text": "认领需求"
+        "pagePath": "pages/pending/pending",
+        "text": "待认领"
+      },
+      {
+        "pagePath": "pages/ongoing/ongoing",
+        "text": "进行中"
+      },
+      {
+        "pagePath": "pages/complete/complete",
+        "text": "已完成"
       }
     ]
   },
-  "usingComponents": {
-  },
+  "usingComponents": {},
   "sitemapLocation": "sitemap.json"
 }
