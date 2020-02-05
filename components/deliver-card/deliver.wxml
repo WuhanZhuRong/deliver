@@ -1,0 +1,5 @@
+<van-card wx:key="unique" tag="{{types[type]}}" desc="{{mobile}}" title="{{estate}}">
+  <view slot="footer">
+    <van-button size="mini">{{statusButtons[status]}}</van-button>
+  </view>
+</van-card>

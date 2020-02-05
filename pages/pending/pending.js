@@ -5,7 +5,22 @@ Page({
    * Page initial data
    */
   data: {
-
+    delivers: [
+      {
+        type: 0,
+        estate: "南岸晶都花园",
+        mobile: "18616908888",
+        status: 0,
+        updateTime: 100000,
+      },
+      {
+        type: 0,
+        estate: "铂金名筑",
+        mobile: "18616333388",
+        status: 0,
+        updateTime: 100000,
+      },
+    ]
   },
 
   /**

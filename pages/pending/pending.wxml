@@ -1,2 +1,3 @@
-<!--pages/pending/pending.wxml-->
-<text>pages/pending/pending.wxml</text>
+<view wx:for="{{delivers}}" wx:key="unique">
+  <deliver-card type="{{item.type}}" mobile="{{item.mobile}}" estate="{{item.estate}}" status="{{item.status}}" updateTime="{{updateTime}}" />
+</view>
