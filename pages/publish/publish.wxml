@@ -1,58 +1,19 @@
+<view style="height: 100%; position: relative;">
+  <van-cell title="选择需求" value="{{columns[selectedKey]}}" bind:click="showPopup" />
+  <van-popup show="{{ show }}" bind:close="onClosePopup" position="bottom" custom-style="height: 300px">
+    <van-picker show-toolbar columns="{{ columns }}" bind:confirm="onConfirmSelect" bind:cancel="onClosePopup" />
+  </van-popup>
 
-<van-cell title="选择需求" value="{{columns[selectedKey]}}" bind:click="showPopup" />
-<van-popup show="{{ show }}" bind:close="onClosePopup" position="bottom" custom-style="height: 300px">
-    <van-picker
-      show-toolbar
-      columns="{{ columns }}"
-      bind:confirm="onConfirmSelect"
-      bind:confirm="onClosePopup"
-    />
-</van-popup>
-
-
-<demo-block>
   <van-cell-group>
-    <van-field
-      value="{{ username }}"
-      label="住户名"
-      placeholder="请输入住户名"
-      clearable
-      right-icon-class="custom-icon"
-      required
-    />
-    <van-field
-      value="{{ address }}"
-      label="地址"
-      placeholder="请输入地址"
-      clearable
-      right-icon-class="custom-icon"
-      required
-    />
-    <van-field
-      value="{{ mobile }}"
-      label="联系方式"
-      placeholder="请输入联系方式"
-      clearable
-      right-icon-class="custom-icon"
-      required
-    />
+    <van-field value="{{ username }}" label="住户名" placeholder="请输入住户名" clearable right-icon-class="custom-icon" bind:change="onChangeName" required />
+    <van-field value="{{ address }}" label="地址" placeholder="请输入地址" clearable right-icon-class="custom-icon" bind:change="onChangeAddress" required />
+    <van-field value="{{ mobile }}" label="联系方式" placeholder="请输入联系方式" clearable right-icon-class="custom-icon" bind:change="onChangeMobile" required />
   </van-cell-group>
-</demo-block>
 
 
-<demo-block>
   <van-cell-group>
-    <van-field
-      value="{{ message }}"
-      label="详细信息"
-      type="textarea"
-      placeholder="请输入详细信息"
-      rows="1"
-      autosize
-      border="{{ false }}"
-    />
+    <van-field value="{{ detail }}" type="textarea" placeholder="请输入详细信息" autosize border="{{ false }}" bind:change="onChangeDetail" />
   </van-cell-group>
-</demo-block>
 
-<van-button type="primary" size="large" block custom-class="demo-margin-bottom">发布需求</van-button>
-
+  <van-button type="primary" size="large" block class="publish-button" bind:click="publish">发布需求</van-button>
+</view>

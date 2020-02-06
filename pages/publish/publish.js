@@ -8,16 +8,38 @@ Page({
     username: '',
     address: '',
     mobile: '',
-    message: '',
+    detail: '',
     columns: ['领外卖', '取快递', '其他'],
     selectedKey: 0,
     show: false
   },
 
   onConfirmSelect(event) {
+    console.log(event)
     this.setData({
       selectedKey: event.detail.index,
       show: false
+    })
+  },
+
+  onChangeDetail(event) {
+    this.setData({
+      detail: event.detail
+    })
+  },
+  onChangeName(event) {
+    this.setData({
+      name: event.detail
+    })
+  },
+  onChangeAddress(event) {
+    this.setData({
+      address: event.detail
+    })
+  },
+  onChangeMobile(event) {
+    this.setData({
+      mobile: event.detail
     })
   },
 
@@ -37,6 +59,13 @@ Page({
     this.setData({
       show: false
     });
+  },
+
+  publish() {
+    // TODO: send request
+    wx.switchTab({
+      url: '/pages/pending/pending',
+    })
   },
 
   /**
