@@ -5,12 +5,12 @@ Page({
    * Page initial data
    */
   data: {
-    delivers: [
-      {
+    delivers: [{
         type: 0,
         estate: "南岸晶都花园",
         mobile: "18616908888",
         status: 0,
+        name: "金小秋",
         updateTime: 100000,
       },
       {
@@ -18,6 +18,7 @@ Page({
         estate: "铂金名筑",
         mobile: "18616333388",
         status: 0,
+        name: "微小扰",
         updateTime: 100000,
       },
     ]
@@ -26,14 +27,14 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
 
   },
 
   /**
    * Lifecycle function--Called when page is initially rendered
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
@@ -47,35 +48,35 @@ Page({
   /**
    * Lifecycle function--Called when page hide
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page unload
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * Page event handler function--Called when user drop down
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * Called when page reach bottom
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * Called when user click on the top right corner to share
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

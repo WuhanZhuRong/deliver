@@ -1,5 +1,10 @@
-<van-card wx:key="unique" tag="{{types[type]}}" desc="{{mobile}}" title="{{estate}}">
+<van-card custom-class="deliver-card" wx:key="unique" tag="{{types[type]}}" title="{{estate}}">
   <view slot="footer">
-    <van-button size="mini">{{statusButtons[status]}}</van-button>
+    <van-button class="deliver-button" type="primary" size="mini">{{statusButtons[status]}}</van-button>
+    <van-button class="deliver-button" type="info" size="mini">详情</van-button>
+  </view>
+  <view slot="desc">
+    <view>{{name}}</view>
+    <view>{{mobile}}</view>
   </view>
 </van-card>

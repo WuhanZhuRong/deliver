@@ -1,1 +1,9 @@
 /* deliver.wxss */
+
+.deliver-button {
+  margin-right: 5px;
+}
+
+.van-card__thumb {
+  height: 50px;
+}

@@ -3,6 +3,10 @@ Component({
   /**
    * Component properties
    */
+  options: {
+    styleIsolation: 'shared'
+  },
+  
   properties: {
     type: {
       type: Number,
@@ -13,6 +17,10 @@ Component({
       value: ""
     },
     mobile: {
+      type: String,
+      value: ""
+    },
+    name: {
       type: String,
       value: ""
     },
