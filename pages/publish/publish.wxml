@@ -1,9 +1,11 @@
 
-<van-cell title="选择需求" is-link bind:click="showPopup" />
-<van-popup show="{{ show }}" bind:close="onClose" position="bottom" custom-style="height: 40%;">
+<van-cell title="选择需求" value="{{columns[selectedKey]}}" bind:click="showPopup" />
+<van-popup show="{{ show }}" bind:close="onClosePopup" position="bottom" custom-style="height: 300px">
     <van-picker
+      show-toolbar
       columns="{{ columns }}"
-      bind:change="onSelect"
+      bind:confirm="onConfirmSelect"
+      bind:confirm="onClosePopup"
     />
 </van-popup>
 

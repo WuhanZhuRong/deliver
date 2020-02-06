@@ -5,3 +5,9 @@
 .custom-icon {
   color: #1989fa;
 }
+
+.publish-button {
+  margin-top: 10px;
+  position:absolute;
+  bottom: 10px;
+}
