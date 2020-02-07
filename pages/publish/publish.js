@@ -1,3 +1,4 @@
+const app = getApp()
 // pages/publish/publish.js
 Page({
 
@@ -66,6 +67,30 @@ Page({
     wx.switchTab({
       url: '/pages/pending/pending',
     })
+  },
+
+  getPhoneNumber(e) {
+    const { iv, encryptedData } = e.detail;
+    wx.checkSession({
+      success() {
+        console.log("发送获取手机号码请求")
+        wx.request({
+          url: 'http://localhost:8888/users/authorization',
+          method: 'put',
+          header: {
+            Authorization: app.globalData.jwt_token
+          },
+          data: { iv, encryptedData },
+        })
+      },
+      fail() {
+        app.login();
+        wx.showToast({
+          title: '请重新尝试',
+        })
+      }
+    })
+    
   },
 
   /**

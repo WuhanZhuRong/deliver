@@ -1,17 +1,17 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    var jwt_token = wx.getStorageSync('jwt_token')
+
+    if (!jwt_token) {
+      this.login();
+    } else {
+      this.globalData.jwt_token = jwt_token;
+    }
 
     // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
+
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -35,6 +35,33 @@ App({
   },
   globalData: {
     userInfo: null,
-    host: ''
+    host: '',
+    jwt_token: ''
+  },
+  login() {
+    const _this = this;
+    wx.login({
+      success: res => {
+        const {
+          code
+        } = res;
+        console.log(code);
+        wx.request({
+          url: 'http://localhost:8888/login',
+          method: 'post',
+          data: {
+            "code": code
+          },
+          success: res => {
+            const jwt_token = res.header.Authorization;
+            _this.globalData.jwt_token = jwt_token;
+            wx.setStorage({
+              key: 'jwt_token',
+              data: jwt_token,
+            })
+          }
+        })
+      }
+    })
   }
 })
